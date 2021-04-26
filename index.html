@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+h1 {
+  background-color: lightgrey;
+  text-align: center;
+  font-size: 40px;
+  width: 650px;
+  border: 1px solid rgb(92, 6, 6);
+  padding: 2px;
+  margin: 0% 5% 0% 5%;
+}
+
+body {
+  background-image: url('https://iili.io/BdMM3G.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: 100%;
+  background-size: 100%;
+}
+
+p {
+  background-color:;
+  text-align: center;
+  font-size: 150px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+
+}
+
+.footer{ 
+	   background-color:orange;
+       font-color:white;
+       position: fixed;     
+       text-align: center;    
+       bottom: 0px; 
+       width: 100%;
+}
+
+.glow {
+        font-size: 190px;
+        color: #d9f010;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                       0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+        }
+        to {
+          text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
+                       0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        }
+        
+</style>
+</head>
+<body>
+
+	<body style="background-color:royalblue;">
+
+<h1> Graduation Day Countdown</h1>
+
+<div>
+    <p class="glow" id="demo"></p>
+    <br>
+    <br>
+    <br>
+    <p class="glow" style="font-size: 100px;">👨‍🎓👏🥇🥇🏆👨‍🎓😇</p>
+</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 30, 2021 24:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "Days";
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "HAPPY GRADUATION DAY!! CONGRATULATIONS!";
+  }
+}, 1000);
+</script>
+
+	<div class="footer">Coded with Visual Studio Code By: Sir Bhem Apare</div>
+
+</body>
+</html>
